@@ -1,0 +1,14 @@
+1 - Qu’est-ce que l’internet ? 
+
+1.1 - Un navigateur web incontournable
+
+Classement des navigateurs web les plus utilisés dans le monde selon la dernière mise à jour de statcounter en Août 2023 :
+  
+    1.    Google Chrome
+    2.    Safari
+    3.    Bord
+    4.    Firefox
+    5.    Opéra
+    6. Internet Samsung
+
+Il y en a bien d’autres navigateurs bien sur, comme on peut voir sur les store de nos desktop, mais ces 6 sont les  plus utilisés à l’heure actuelle,
