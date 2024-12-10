@@ -10,6 +10,7 @@ body {
     background-color: #ccc;
   }
   
+  
   /* Selectors to be matched up with rulesets */
   
   .card article img/*(0,0,1,1)*/
@@ -23,50 +24,105 @@ body {
     width: 35em;
     height: 22em;
     margin: 5em auto;
-    background-colour: red;
+    background-color: red;
     border: 0.2em solid black;
     border-radius: 1.5em;
   }
   
   {
-    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    background: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    /*Ici 1ère erreur c'était mentionné background-image au lieu de background*
+    Technique utilisée : analyse du code sur https://jigsaw.w3.org/css-validator*/
     border-radius: 1.5em 1.5em 0 0;
   }
   
   {
-    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    background: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+        /*Ici 2è erreur c'était mentionné background-image au lieu de background
+        Technique utilisée : analyse du code sur https://jigsaw.w3.org/css-validator/*/
+
     border-radius: 0 0 1.5em 1.5em;
   }
   
   {
     max-height: 100%
-    float: right;
+    float:right;
   }
 
   /*styles spécifiques à la configuration du conteneur de cartes*/
 
   .card{
-    width: 50vw;
-    height: auto;
-    background-color: rgb(156, 173, 206);
-    border: solid 2px fuchsia;
-    border-radius: 15px;
+    width: 35em;/*c'est quoi la largeur fixe demandée ??*/
+    height: 22em;
+    background-color:red; /*rgb(156, 173, 206);*/
+    border: solid 0.2em black;
+    border-radius: 1.5em;
+    margin: 5em auto;
+
   }
+
+  *{
+    margin: 0;
+}
+
   /*styles spécifiques à l'en-tête et au pied de page*/
 
-  h2{
-    background: linear-gradient(to right,rgb(241, 241, 191),rgb(255, 255, 0));
+  .card header, .card footer{
+    box-sizing: border-box;
+     height:5em;
+     padding: 1em;
+   }
+
+  .card header{
+    background: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
     text-align: center;
-    border-radius: 15px;
+    border-radius: 1.5em 1.5em 0 0;
     margin-top: 0px;
     padding: 5px;
   }
 
-  footer{
-    background: linear-gradient(to right, rgb(243, 167, 1),rgb(182, 158, 127));
-    border-radius: 15px;
-    padding: 5px;
+  .card header h2{
+    height: 3em;
+    font-size: 2em;
+    line-height:1.5em;/*A voir pourquoi cela décale l'emplacement du titre*/
   }
+
+  .card footer{
+    background: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+  }
+
+  .card footer p{
+    height:1.5em;
+    font-size:20;
+    line-height: 3em;
+}
 
   /*styles spécifiques au contenu principal de la carte de visite*/
   
+.card article{
+    height:12em ; 
+    background-color: rgba(0,0,0,0.25);
+}
+
+.card article p{
+  padding: 1em;
+  color: white;
+}
+
+.card article img{
+    height: 12em;
+    background-color:rgba(0, 0, 0, 0.5);/*ne semble pas affecter l'image*/
+    float: right;
+    max-height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+
+  
+
+
+
+
+
